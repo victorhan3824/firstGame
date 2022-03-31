@@ -1,0 +1,7 @@
+void stat() {
+  
+}
+
+void statClick() {
+  
+}
