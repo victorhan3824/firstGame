@@ -2,7 +2,7 @@ void gameover() {
   background(255, 0, 0);
   theme.pause();
   gameEnd.play();
-
+  
   topScore = max(score,topScore); //re-calculating topScore
 
   fill(black);
@@ -28,6 +28,7 @@ void gameReset() {
 
 void gameoverClick() {
   mode = INTRO;
+  scoreSum = scoreSum + score; //adding the score to total score
   gameEnd.pause();
   theme.rewind();
   gameReset();
