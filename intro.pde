@@ -15,7 +15,10 @@ void intro(){
 }
 
 void introClick() {
-  if (mouseX > width/2-50 && mouseX < width/2+50 && mouseY > 470 && mouseY < 520) mode = GAME;
+  if (mouseX > width/2-50 && mouseX < width/2+50 && mouseY > 470 && mouseY < 520) {
+    mode = GAME;
+    gameSum = gameSum + 1;
+  }
   if (mouseX > width/4-50 && mouseX < width/4+50 && mouseY > 470 && mouseY < 520) mode = SELECT;
   if (mouseX > width*0.75-50 && mouseX < width*0.75+50 && mouseY > 470 && mouseY < 520) mode = STAT;
 }
