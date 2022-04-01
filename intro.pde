@@ -6,6 +6,8 @@ void intro(){
   
   background(yellow);
   gameStartButton();
+  selectButton();
+  statButton();
   
   fill(black);
   textSize(72);
@@ -13,22 +15,54 @@ void intro(){
 }
 
 void introClick() {
-  if (mouseX > 350 && mouseX < 450 && mouseY > 470 && mouseY < 520) mode = GAME;
+  if (mouseX > width/2-50 && mouseX < width/2+50 && mouseY > 470 && mouseY < 520) mode = GAME;
+  if (mouseX > width/4-50 && mouseX < width/4+50 && mouseY > 470 && mouseY < 520) mode = SELECT;
+  if (mouseX > width*0.75-50 && mouseX < width*0.75+50 && mouseY > 470 && mouseY < 520) mode = STAT;
 }
 
 //other functions ================================================================
 
 void gameStartButton() {
-  if (mouseX > 350 && mouseX < 450 && mouseY > 470 && mouseY < 520){
+  if (mouseX > width/2-50 && mouseX < width/2+50 && mouseY > 470 && mouseY < 520){
     stroke(red);
     fill(pink);
   } else {
     stroke(black);
     fill(white);
   }
-  rect(400,500,100,60);  
-  
+  rect(width/2,500,100,60);  
+
   fill(black);
   textSize(24);
   text("START",400,500);
+}
+
+void selectButton() {
+  if (mouseX > width/4-50 && mouseX < width/4+50 && mouseY > 470 && mouseY < 520){
+    stroke(red);
+    fill(pink);
+  } else {
+    stroke(black);
+    fill(white);
+  }
+  rect(width/4,500,100,60);  
+
+  fill(black);
+  textSize(22);
+  text("OPTIONS",width/4,500);
+}
+
+void statButton() {
+  if (mouseX > width*0.75-50 && mouseX < width*0.75+50 && mouseY > 470 && mouseY < 520){
+    stroke(red);
+    fill(pink);
+  } else {
+    stroke(black);
+    fill(white);
+  }
+  rect(width*0.75,500,100,60);  
+
+  fill(black);
+  textSize(24);
+  text("STATS",width*0.75,500);
 }
