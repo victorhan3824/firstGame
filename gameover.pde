@@ -28,6 +28,7 @@ void gameReset() {
 
 void gameoverClick() {
   mode = INTRO;
+  gameEnd.pause();
   theme.rewind();
   gameReset();
 }
