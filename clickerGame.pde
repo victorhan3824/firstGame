@@ -6,6 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 //vic
+//nf(num, left, right) this is used to limit the digits of float
 
 //variables =========================================================================
 int mode; 
@@ -21,7 +22,7 @@ int hit;
 float x,y,d;
 float vx, vy; //target velocity
 int score, lives;
-int topScore; 
+int topScore, gameSum, scoreSum, timeSum; 
 
 Minim minim;
 AudioPlayer theme, coin, bump, gameEnd; 
@@ -59,6 +60,9 @@ void setup() {
   score    = 0;
   lives    = 3;
   topScore = 0; 
+  gameSum = 0;
+  scoreSum = 0; 
+  timeSum = 0;
   
   //minim
   minim = new Minim(this);
