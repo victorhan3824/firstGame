@@ -2,7 +2,9 @@
 void game() {
   theme.play();
   background(lightGreen);
-
+  timeSum = 0;
+  
+  //display board
   fill(black);
   textSize(28);
   text("Score: " + score, width/2, 50);
@@ -30,8 +32,8 @@ void game() {
   circle(x, y, d); 
 
   //moving
-  x = x + 2*vx;
-  y = y + 2*vy;
+  x = x + (1+float(score)*0.15)*vx;
+  y = y + (1+float(score)*0.15)*vy;
 
   //bouncing back
   if (x < d/2 || x > width-d/2 ) {
