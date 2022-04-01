@@ -85,3 +85,19 @@ void draw() {
     stat();        
   }
 }
+
+//HOME button, shared by mode STAT and mode SELECT ===============================
+void home() {
+  if (mouseX > width/8-50 && mouseX < width/8+50 && mouseY > height/8-30 && mouseY < height/8+30){
+    stroke(red);
+    fill(pink);
+  } else {
+    stroke(black);
+    fill(white);
+  }
+  rect(width/8,height/8,100,60);  
+
+  fill(black);
+  textSize(24);
+  text("HOME",width/8,height/8);
+}
